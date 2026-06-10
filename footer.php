@@ -1,0 +1,1 @@
+<footer><p>Copyright © 2025 Miaou Blog</p></footer>

@@ -1,0 +1,667 @@
+/* ----------------------------------------------- Général ----------------------------------------------- */
+
+:root {
+    --color1: #FFC2E0;
+    --color2: #EC8BB2;
+    --color3: black;
+    --color4: #FF0D76;
+
+    --font-family1: 'Lilita One';
+}
+
+* {
+    font-family: var(--font-family1);
+    font-weight: 200;
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--color1);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+a {
+    color: var(--color4);
+}
+
+button, .custom-file-label, .button, .post-categorie, #admin_categories section a, input[type="file"]::file-selector-button {
+    font-family: var(--font-family1);
+    padding: 10px 20px;
+    background-color: var(--color4);
+    color: var(--color3);
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    accent-color: var(--color4);
+}
+
+.custom-file-label {
+    align-self: center;
+}
+
+button:hover, .custom-file-label:hover, .button:hover, .post-categorie:hover, #admin_categories section a:hover, input[type="file"]::file-selector-button:hover {
+    background-color: var(--color3);
+    color: var(--color4);
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: solid 4px white;
+    border-radius: 15px;
+    padding-bottom: 27px;
+}
+
+fieldset div {
+    display: flex;
+    gap: 15px;
+}
+
+fieldset legend {
+    margin-bottom: 15px;
+}
+
+input[type='radio'] {
+    accent-color: var(--color4);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ----------------------------------------------- Messages d'erreur dans les formulaires ----------------------------------------------- */
+form span {
+    font-size: 15px;
+    color: red;
+}
+
+/* ----------------------------------------------- Nav ----------------------------------------------- */
+
+nav {
+    background-color: var(--color4);
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+    list-style-type: none;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+nav li:hover {
+    background-color: var(--color3);
+}
+
+nav li:hover a {
+    color: var(--color4);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color3);
+    text-align: center;
+}
+
+/* ----------------------------------------------- Header ----------------------------------------------- */
+
+#header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-title img {
+    width: 120px;
+    height: 120px;
+}
+
+#header-top > a {
+    text-decoration: none;
+    color: var(--color3);
+}
+
+#header-top > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+#header-top > div a {
+    color: var(--color4);
+}
+
+h1 {
+    font-size: 90px;
+    margin-left: 180px;
+}
+
+/* ---------------------------- Pages authentification (création et connexion) -------------------------- */
+
+body#authentification form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+body#authentification form {
+    border-radius: 15px;
+    align-items: stretch;
+    gap: 15px;
+    padding: 20px;
+}
+
+body#authentification form button {
+    align-self: center;
+}
+
+body#authentification main a {
+    color: var(--color4);
+}
+
+body#authentification h2 {
+    margin-bottom: 0;
+}
+
+body#authentification #authentification-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------------------------- Page création post ---------------------------------------------- */
+
+textarea {
+    height: 125px;
+    resize: none;
+}
+
+#form-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#form-end button {
+    width: 150px;
+}
+
+/* --------------------------------- Page explorer ---------------------------------------------- */
+
+.post {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.post-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.post-card {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.post-footer {
+  width: 100%;
+  background-color: var(--color4);
+  color: var(--color3);
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+  transition: all 0.3s ease;
+}
+
+.post-card-container:hover .post-footer {
+  background-color: var(--color3);
+  color: var(--color4);
+}
+
+.post-footer h3, 
+.post-footer p {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.post-footer .username {
+  color: var(--color3) !important;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.post-card-container:hover .post-footer .username {
+  color: var(--color4) !important;
+}
+
+.post-footer .username:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ Filtres pour la page explorer --------------- */
+#explorer .filter-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#explorer .filter-container form {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#explorer .filter-container select,
+#explorer .filter-container input[type="text"],
+#explorer .filter-container button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid var(--color4);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
+#explorer .filter-container select,
+#explorer .filter-container input[type="text"] {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
+#explorer .filter-container select:hover,
+#explorer .filter-container input[type="text"]:hover {
+  background-color: var(--color4);
+  color: var(--color3);
+}
+
+#explorer .filter-container input[type="text"]::placeholder {
+  color: var(--color4);
+  opacity: 0.7;
+}
+
+#explorer .filter-container button {
+  background-color: var(--color4);
+  color: var(--color3);
+}
+
+#explorer .filter-container button:hover {
+  background-color: var(--color3);
+  color: var(--color4);
+}
+
+#explorer .filter-container button.reset {
+  background-color: transparent;
+  color: var(--color4);
+}
+
+#explorer .filter-container button.reset:hover {
+  background-color: var(--color4);
+  color: var(--color3);
+}
+
+/* --------------------------------- Page post ------------------------------------------------------- */
+
+body#post main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body#post main section {
+    max-width: 900px;
+}
+
+#post-contenu > a {
+    color: var(--color4);
+}
+
+#post-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#post-images {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+#post-images img {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #000; 
+}
+
+#post-commentaires {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 15px;
+}
+
+#form-commentaires, #admin_categories form, .commentaire {
+    padding: 25px;
+    background-color: var(--color2);
+    border-radius: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+#form-commentaires {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commentaire {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#post-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* --------------------------------- Page mon compte ---------------------------------------------- */
+
+body#mon-compte main {
+    padding: 20px;
+}
+
+body#mon-compte h2 {
+    margin-bottom: 10px;
+}
+
+.mon-compte-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.mon-compte-section {
+    background-color: var(--color2);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.mon-compte-section h3 {
+    margin: 0 0 20px 0;
+    color: var(--color3);
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 3px solid var(--color4);
+    padding-bottom: 10px;
+}
+
+.message-succes {
+    background-color: white;
+    color: green;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 3px solid var(--color4);
+}
+
+/* ---partie gestion de compte */
+
+.form-modification {
+    margin-bottom: 20px;
+}
+
+.form-modification label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color3);
+    font-size: 18px;
+}
+
+.form-input-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-input-group input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid var(--color4);
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.form-input-group button {
+    padding: 10px 30px;
+}
+
+.form-suppression {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 3px solid var(--color4);
+    text-align: center;
+}
+
+/* ---partie gestion de post */
+
+.aucun-contenu {
+    color: var(--color3);
+    font-style: italic;
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+}
+
+.liste-posts {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+
+.liste-posts::-webkit-scrollbar {
+    width: 8px;
+}
+
+.liste-posts::-webkit-scrollbar-track {
+    background: var(--color1);
+    border-radius: 10px;
+}
+
+.liste-posts::-webkit-scrollbar-thumb {
+    background: var(--color4);
+    border-radius: 10px;
+}
+
+.item-post {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--color4);
+}
+
+.post-info h4 {
+    margin: 0 0 10px 0;
+    color: var(--color3);
+    font-size: 1.2em;
+}
+
+.post-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.post-meta .categorie {
+    background-color: var(--color4);
+    color: var(--color3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.post-meta .date {
+    color: var(--color3);
+    font-size: 0.9em;
+}
+
+.description {
+    color: var(--color3);
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-supprimer,
+.btn-supprimer-petit {
+    background-color: var(--color3);
+    color: var(--color4);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-supprimer {
+    padding: 12px 40px;
+    font-size: 18px;
+}
+
+.btn-supprimer-petit {
+    padding: 8px 16px;
+    font-size: 0.85em;
+}
+
+.btn-supprimer:hover,
+.btn-supprimer-petit:hover {
+    background-color: var(--color4);
+    color: var(--color3);
+}
+
+.btn-voir {
+    padding: 8px 16px;
+    background-color: var(--color4);
+    color: var(--color3);
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.85em;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-voir:hover {
+    background-color: var(--color3);
+    color: var(--color4);
+}
+
+/* --------------------------------- Page Admin gestion categories ------------------------------------------------------- */
+
+#admin_categories .categorie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color2);
+    border-radius: 20px;
+    padding: 15px 20px;
+}
+
+#admin_categories section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ------------------------------------------------ Page contact ----------------------------------------------------- */
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 600px;
+}
+
+/* -------------- Footer --------*/
+
+footer {
+    color : var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
