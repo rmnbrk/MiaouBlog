@@ -1,7 +1,5 @@
 # MiaouBlog
 
-
-
 ## Guide d'installation
 
 ### Avec Wamp
@@ -18,5 +16,4 @@
     - mot de passe: admin69IUT;
 2. Vous avez désormais à la modification des catégories !
 
-### Accès au prototype de la maquette
 ***
